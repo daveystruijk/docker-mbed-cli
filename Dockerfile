@@ -1,7 +1,10 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y python2.7 python-pip gcc-arm-none-eabi git
+RUN apt-get install -y python2.7 python-pip software-properties-common git
+RUN add-apt-repository ppa:team-gcc-arm-embedded/ppa
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y gcc-arm-none-eabi
 
 RUN pip install mbed-cli
 
