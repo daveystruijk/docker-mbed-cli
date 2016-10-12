@@ -8,7 +8,7 @@ RUN add-apt-repository ppa:team-gcc-arm-embedded/ppa
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y gcc-arm-none-eabi
 
-RUN pip install mbed-cli
+RUN pip install mbed-cli PrettyTable
 
 RUN mbed toolchain -G GCC_ARM
 
