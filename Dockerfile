@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+MAINTAINER MacRat <m@crat.jp>
+
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y python2.7 python-pip software-properties-common git
 RUN add-apt-repository ppa:team-gcc-arm-embedded/ppa
