@@ -3,16 +3,14 @@ mbed-cli on the docker
 installation
 ============
 ``` sh
-$ git clone http://github.com/macrat/docker-mbed-cli
-$ cd docker-mbed-cli
-$ docker build -t mbed-cli .
+$ docker pull macrat/docker-mbed-cli
 ```
 
 usage
 =====
 ## make mbed project
 ``` sh
-$ docker run --rm -v `pwd`:/src mbed-cli new project-name
+$ docker run --rm -v `pwd`:/src docker-mbed-cli new project-name
 $ cd project-name
 $ ls
 ```
@@ -34,7 +32,7 @@ int main() {
 
 ## compile
 ``` sh
-	$ docker run --rm -v `pwd`:/src mbed-cli compile -m BOARD_NAME
+	$ docker run --rm -v `pwd`:/src docker-mbed-cli compile -m BOARD_NAME
 ```
 Please replace BOARD\_NAME with your board model name.
 
