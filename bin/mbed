@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if ! mbed-container status >>/dev/null; then
+	mbed-container start
+fi
+mbed-container exec ${@}
