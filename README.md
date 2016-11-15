@@ -10,7 +10,7 @@ usage
 =====
 ## make mbed project
 ``` sh
-$ docker run --rm -v `pwd`:/src docker-mbed-cli new project-name
+$ docker run --rm -v `pwd`:/src macrat/docker-mbed-cli new project-name
 $ cd project-name
 $ ls
 ```
@@ -32,11 +32,11 @@ int main() {
 
 ## compile
 ``` sh
-	$ docker run --rm -v `pwd`:/src docker-mbed-cli compile -m BOARD_NAME
+	$ docker run --rm -v `pwd`:/src macrat/docker-mbed-cli compile -m BOARD_NAME
 ```
 Please replace BOARD\_NAME with your board model name.
 
-Compiled file will create into `~/.build/BOARD_NAME/GCC_ARM/`.
+Compiled file will create into `BUILD/{BOARD_NAME}/GCC_ARM/`.
 
 helper command
 ==============
